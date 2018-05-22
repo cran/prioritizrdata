@@ -20,23 +20,25 @@ tas_pu
 tas_features
 }
 \description{
-This scenario involves making a prioritization to adequately conserve
-the main types of vegetation found in Tasmania for minimal cost. To
-achieve this goal, the scenario involves using the following data:
+This data set was obtained from the
+\href{http://marxan.net/courses}{"Introduction to \emph{Marxan}" course}
+and was originally part of a larger spatial prioritization performed under
+contract to Australia's Department of Environment and Water Resources
+(Klein \emph{et al.} 2007).
 }
 \details{
-The dataset contains the following items:
+The data set contains the following items:
 
 \describe{
 
   \item{\code{tas_pu}}{Planning unit data. The attribute table has
-    three columns containing unique identifiers ('ids'), unimproved land
-    values ('cost'), and their existing level of protection ('status').
-    Units with 50\% or more of their area contained in IUCN protected areas
+    three columns containing unique identifiers ("id"), unimproved land
+    values ("cost"), and their existing level of protection ("status").
+    Units with 50 \% or more of their area contained in protected areas
     are associated with a status of 2, otherwise they are associated with a
     value of 0.}
 
-  \item{\code{tas_features}}{The distribution of 63 vegetation
+  \item{\code{tas_features}}{The distribution of 62 vegetation
     classes in Tasmania, Australia. Each layer in the  stack
     represents a different vegetation class. For a given layer,
     cells indicate the presence (value of 1) or absence (value of 0)
@@ -53,7 +55,10 @@ plot(tas_features)
 
 }
 \references{
-This data was obtained from the "Introduction to Marxan" course
-  (\url{http://marxan.net/courses}).
+Klein C, Carwardine J, Wilson K, Watts M, and Possingham H (2007) \emph{Spatial
+Prioritization Approaches for the Conservation of Biodiversity in
+Australia: Considering Conservation Costs, Ecological & Evolutionary
+Processes, and Large-Intact Areas.} Report to the Department of
+Environment; Water Resources.
 }
 \keyword{datasets}

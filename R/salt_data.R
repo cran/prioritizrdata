@@ -1,18 +1,14 @@
-#' @include internal.R
-NULL
-
 #' Salt Spring Island conservation planning data
 #'
-#' This data was obtained as part of an online Marxan-based planning
-#' tool created for the Coastal Douglas-fir Conservation Partnership (CDFCP).
-#' For more information refer to Schuster \emph{et al.} 2017. For a
-#' worked example  with this dataset, refer to the
-#' \href{saltspring.html}{Salt Spring vignette}. The scenario is
-#' intended to provide an example of how raster planning unit data can be used
-#' in the \emph{prioritizr} package.
+#' This data was obtained as part of an online \emph{Marxan}-based planning
+#' tool created for the Coastal Douglas-fir Conservation Partnership
+#' (CDFCP; Schuster \emph{et al.} 2017). For a worked example  with this
+#' dataset, refer to the \href{saltspring.html}{Salt Spring vignette}. The
+#' scenario is intended to provide an example of how raster planning unit data
+#' can be used in the \pkg{prioritizr} package.
 #'
 #' @details
-#' The dataset contains the following items:
+#' The data set contains the following items:
 #'
 #' \describe{
 #'
@@ -49,7 +45,7 @@ NULL
 #'
 #' @references
 #' BC Assessment (2015) Property Information Services. Available at
-#' \url{http://www.bcassessment.ca} [Date Accessed 2016/06/13].
+#' \url{https://www.bcassessment.ca} [Date Accessed 2016/06/13].
 #'
 #' Morrell N, Schuster R, Crombie M, and Arcese P (2017) \emph{A Prioritization
 #' Tool for the Conservation of Coastal Douglas-fir Forest and Savannah
