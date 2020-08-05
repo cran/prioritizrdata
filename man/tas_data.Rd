@@ -5,49 +5,55 @@
 \alias{tas_data}
 \alias{tas_features}
 \alias{tas_pu}
-\alias{tas_pu}
-\alias{tas_features}
-\title{Tasmanian conservation planning data}
-\format{\describe{
-  \item{tas_features}{\code{\link[raster]{RasterStack-class}} object}
-  \item{tas_pu}{\code{\link[sp]{SpatialPolygonsDataFrame}} object.}
-}}
+\title{Tasmania data}
+\format{
+\describe{
+\item{tas_features}{\code{\linkS4class{RasterStack}} object}
+\item{tas_pu}{\code{\link[sp:SpatialPolygons]{sp::SpatialPolygonsDataFrame()}} object.}
+}
+}
 \usage{
 data(tas_features)
 
-tas_pu
-
-tas_features
+data(tas_pu)
 }
 \description{
-This data set was obtained from the
-\href{http://marxan.net/courses}{"Introduction to \emph{Marxan}" course}
+This dataset was obtained from the
+\href{https://marxansolutions.org/}{"Introduction to \emph{Marxan}" course}
 and was originally part of a larger spatial prioritization performed under
 contract to Australia's Department of Environment and Water Resources
-(Klein \emph{et al.} 2007).
+(Klein \emph{et al.} 2007). For a worked example with this
+dataset, refer to the \href{https://CRAN.R-project.org/package=prioritizr/vignettes/tasmania.html}{Tasmania vignette in the \pkg{prioritizr} package}.
 }
 \details{
-The data set contains the following items:
+The dataset contains the following items:
 
 \describe{
 
-  \item{\code{tas_pu}}{Planning unit data. The attribute table has
-    three columns containing unique identifiers ("id"), unimproved land
-    values ("cost"), and their existing level of protection ("status").
-    Units with 50 \% or more of their area contained in protected areas
-    are associated with a status of 2, otherwise they are associated with a
-    value of 0.}
+\item{\code{tas_pu}}{Planning unit data. The attribute table has
+three columns containing unique identifiers (\code{"id"}),
+unimproved land values (\code{"cost"}), and their existing level of
+protection (\code{"status"}). Units with 50\% or more of their area
+contained in protected areas are associated with a status of 2,
+otherwise they are associated with a value of 0.
+It also contains columns (\code{"locked_in"} and \code{"locked_out"})
+with \code{logical} values (i.e. \code{TRUE} or \code{FALSE} values)
+for locking in and locking out planning units.}
 
-  \item{\code{tas_features}}{The distribution of 62 vegetation
-    classes in Tasmania, Australia. Each layer in the  stack
-    represents a different vegetation class. For a given layer,
-    cells indicate the presence (value of 1) or absence (value of 0)
-    of the vegetation class in an area.}
+\item{\code{tas_features}}{The distribution of 62 vegetation
+classes in Tasmania, Australia. Each layer in the stack
+represents a different vegetation class. For a given layer,
+cells indicate the presence (value of 1) or absence (value of 0)
+of the vegetation class in an area.}
 }
 }
 \examples{
 # load data
 data(tas_pu, tas_features)
+
+# preview data
+print(tas_pu)
+print(tas_features)
 
 # plot data
 plot(tas_pu)
